@@ -8,16 +8,18 @@ public class HL_PlayerController : MonoBehaviour
 
     [SerializeField]
     private int moveSpeed = 2000;
+
+    private Vector2 vecVelocity = Vector2.zero;
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
     void MovePlayer()
     {
-        float flMoveAxisX = Input.GetAxis("Horizontal");
-        float flMoveAxisY = Input.GetAxis("Vertical");
-
-        rigidBody.velocity = new Vector2(((flMoveAxisX * Time.deltaTime) * moveSpeed), ((flMoveAxisY * Time.deltaTime) * moveSpeed));
+        vecVelocity.x = (Input.GetAxis("Horizontal") * Time.deltaTime);
+        vecVelocity.y = (Input.GetAxis("Vertical") * Time.deltaTime);
+        vecVelocity *= moveSpeed;
+        rigidBody.velocity = vecVelocity;
     }
 
     void Update()
