@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/2d Charcter Controller Test Map.unity
+    guid: 7c1dedd81e870d14c8f3fae088317fd3
   m_configObjects: {}
